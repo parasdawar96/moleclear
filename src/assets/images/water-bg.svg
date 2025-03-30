@@ -1,0 +1,28 @@
+<svg
+  width="1920"
+  height="1080"
+  viewBox="0 0 1920 1080"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Large Wave Pattern -->
+  <path
+    d="M0 200C320 200 320 0 640 0C960 0 960 200 1280 200C1600 200 1600 0 1920 0V1080H0V200Z"
+    fill="white"
+    fill-opacity="0.03"
+  />
+  
+  <!-- Medium Wave Pattern -->
+  <path
+    d="M0 400C320 400 320 300 640 300C960 300 960 400 1280 400C1600 400 1600 300 1920 300V1080H0V400Z"
+    fill="white"
+    fill-opacity="0.02"
+  />
+  
+  <!-- Small Wave Pattern -->
+  <path
+    d="M0 600C320 600 320 500 640 500C960 500 960 600 1280 600C1600 600 1600 500 1920 500V1080H0V600Z"
+    fill="white"
+    fill-opacity="0.01"
+  />
+</svg>

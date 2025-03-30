@@ -1,0 +1,319 @@
+.contact-section {
+  padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 2rem);
+  background: linear-gradient(135deg, #f0f7ff 0%, #e1f5fe 50%, #b3e5fc 100%);
+  position: relative;
+  overflow: hidden;
+  color: var(--text-dark);
+}
+
+.section-content h2 {
+  color: var(--text-dark);
+  position: relative;
+  margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  text-align: center;
+}
+
+.section-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 2px;
+}
+
+.section-intro {
+  color: var(--text-dark);
+  text-align: center;
+  max-width: min(800px, 90%);
+  margin: 0 auto clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  padding: 0 clamp(1rem, 3vw, 2rem);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.info-cards-container {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2rem);
+  width: 100%;
+  justify-content: center;
+  margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  flex-wrap: wrap;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: 12px;
+  text-align: center;
+  width: 100%;
+  max-width: min(300px, calc(50% - 1rem));
+  flex: 1 1 300px;
+  box-shadow: 0 8px 32px rgba(52, 152, 219, 0.1);
+  border: 1px solid rgba(52, 152, 219, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(52, 152, 219, 0.15);
+}
+
+.info-card h3 {
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  margin-bottom: clamp(1rem, 3vw, 1.5rem);
+  color: #3498db; /* Fallback */
+}
+
+.info-card p {
+  color: var(--text-dark);
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  margin-bottom: clamp(0.5rem, 2vw, 0.8rem);
+}
+
+.consultation-btn {
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+  color: white;
+  border: none;
+  padding: clamp(0.8rem, 2.5vw, 1.2rem) clamp(2rem, 5vw, 3rem);
+  border-radius: 30px;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  font-weight: 500;
+  margin-top: 1rem;
+  width: min(100%, 300px);
+}
+
+.consultation-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+}
+
+/* Form Overlay */
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(240, 247, 255, 0.95);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.consultation-form {
+  background: white;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border-radius: 16px;
+  width: min(500px, 95%);
+  position: relative;
+  border: 1px solid rgba(52, 152, 219, 0.1);
+  box-shadow: 0 12px 40px rgba(52, 152, 219, 0.15);
+}
+
+.consultation-form h3 {
+  color: var(--text-dark);
+  margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  text-align: center;
+  font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+  font-weight: 500;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--text-dark);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: clamp(0.8rem, 2vw, 1rem) clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1.2rem;
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+}
+
+/* Water background effect */
+.contact-bg {
+  opacity: 0.1;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 4rem 1rem;
+  }
+
+  .contact-grid {
+    gap: 2rem;
+  }
+
+  .consultation-form {
+    margin: 1rem;
+    padding: 2rem;
+  }
+
+  .section-content h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .section-intro {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .info-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-card {
+    max-width: 100%;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 2rem 1rem;
+  }
+
+  .section-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .section-intro {
+    font-size: 0.95rem;
+  }
+
+  .consultation-form {
+    padding: 1.5rem;
+  }
+
+  .close-btn {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+/* Landscape mode */
+@media (max-height: 600px) and (orientation: landscape) {
+  .form-overlay {
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
+  .consultation-form {
+    margin: 1rem auto;
+  }
+}
+
+/* Prevent zoom on mobile inputs */
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Touch-friendly targets */
+button,
+input,
+select,
+textarea {
+  min-height: 44px; /* Minimum touch target size */
+}
+
+.close-btn {
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 

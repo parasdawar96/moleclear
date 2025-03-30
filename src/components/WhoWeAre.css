@@ -1,0 +1,43 @@
+.who-we-are-section {
+  padding: 6rem 2rem;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.who-we-are-section .section-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.who-we-are-section h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  grid-column: 1 / -1;
+}
+
+.who-we-are-section p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .who-we-are-section {
+    padding: 4rem 1rem;
+  }
+
+  .who-we-are-section .section-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.who-we-are-bg {
+  opacity: 0.6;
+} 

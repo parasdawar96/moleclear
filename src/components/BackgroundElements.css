@@ -1,0 +1,126 @@
+.background-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Water Theme */
+.water-theme .water-wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: wave 20s infinite linear;
+}
+
+.water-theme .droplet {
+  position: absolute;
+  width: 30px;
+  height: 45px;
+  background: linear-gradient(180deg, #3498db 0%, #2980b9 100%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  opacity: 0.15;
+  animation: drop 8s infinite linear;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+
+.water-theme .droplet-1 {
+  top: -45px;
+  left: 20%;
+  animation-delay: -2s;
+}
+
+.water-theme .droplet-2 {
+  top: -45px;
+  left: 40%;
+  width: 25px;
+  height: 38px;
+  animation-delay: -4s;
+}
+
+.water-theme .droplet-3 {
+  top: -45px;
+  left: 60%;
+  width: 35px;
+  height: 53px;
+  animation-delay: -6s;
+}
+
+.water-theme .droplet-4 {
+  top: -45px;
+  left: 80%;
+  width: 28px;
+  height: 42px;
+  animation-delay: -5s;
+}
+
+.water-theme .droplet-5 {
+  top: -45px;
+  left: 90%;
+  width: 32px;
+  height: 48px;
+  animation-delay: -3s;
+}
+
+/* Molecule Theme */
+.molecule-theme .molecule {
+  position: absolute;
+  animation: float 20s infinite ease-in-out;
+}
+
+.molecule-theme .molecule-1 {
+  top: 5%;
+  right: 5%;
+  width: 400px;
+  animation-delay: -5s;
+}
+
+.molecule-theme .molecule-2 {
+  bottom: 10%;
+  left: 5%;
+  width: 300px;
+  animation-delay: -10s;
+}
+
+/* Animations */
+@keyframes wave {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-1%) translateY(0.5%);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(30px) rotate(5deg);
+  }
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0.15;
+  }
+  20% {
+    opacity: 0.15;
+  }
+  90% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+} 

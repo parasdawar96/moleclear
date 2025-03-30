@@ -1,0 +1,96 @@
+/* Base Colors */
+:root {
+  /* Brand Colors */
+  --primary-blue: #3498db;
+  --primary-green: #2ecc71;
+  --secondary-blue: #2980b9;
+  --secondary-green: #27ae60;
+  
+  /* Background Colors */
+  --background-light: #f8f9fa;
+  --background-dark: #2c3e50;
+  --white: #ffffff;
+  
+  /* Text Colors */
+  --text-dark: #2c3e50;
+  --text-light: #34495e;
+  --text-muted: #7f8c8d;
+  
+  /* Breakpoints */
+  --mobile: 480px;
+  --tablet: 768px;
+  --laptop: 1024px;
+  --desktop: 1200px;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+/* Common Utility Classes */
+.gradient-text {
+  background: -webkit-linear-gradient(45deg, #3498db, #2ecc71);
+  background: -moz-linear-gradient(45deg, #3498db, #2ecc71);
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #3498db; /* Fallback */
+}
+
+.gradient-bg {
+  background: -webkit-linear-gradient(45deg, #3498db, #2ecc71);
+  background: -moz-linear-gradient(45deg, #3498db, #2ecc71);
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--desktop);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* Common section padding */
+section {
+  padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 2rem);
+}
+
+/* Touch-friendly targets */
+.form-group input,
+.form-group select,
+.form-group textarea,
+.submit-btn,
+.consultation-btn {
+  min-height: 44px; /* Minimum touch target size */
+} 

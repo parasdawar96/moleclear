@@ -1,0 +1,11 @@
+<svg
+  width="40"
+  height="60"
+  viewBox="0 0 40 60"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M20 0 C20 0 0 30 0 40 C0 51.046 8.954 60 20 60 C31.046 60 40 51.046 40 40 C40 30 20 0 20 0"
+    fill="#FFFFFF"
+  />
+</svg>

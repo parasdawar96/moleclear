@@ -1,0 +1,253 @@
+.hero-section {
+  min-height: 80vh;
+  background: -webkit-linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-blue) 50%, var(--primary-green) 100%);
+  background: -moz-linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-blue) 50%, var(--primary-green) 100%);
+  background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-blue) 50%, var(--primary-green) 100%);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.water-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  opacity: 0.15;
+  animation: wave 20s infinite linear;
+}
+
+/* Add a subtle wave pattern */
+.water-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 20px,
+    rgba(255, 255, 255, 0.05) 20px,
+    rgba(255, 255, 255, 0.05) 40px
+  );
+}
+
+.molecule {
+  position: absolute;
+  width: 200px; /* Base size */
+  height: auto;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+}
+
+.molecule-1 {
+  top: 10%;
+  right: 10%;
+  width: clamp(200px, 30vw, 400px);
+  transform: rotate(-15deg);
+}
+
+.molecule-2 {
+  bottom: 15%;
+  left: 8%;
+  width: clamp(150px, 25vw, 300px);
+  transform: rotate(10deg);
+}
+
+.droplet {
+  position: absolute;
+  width: clamp(20px, 4vw, 40px);
+  height: auto;
+  opacity: 0.2;
+}
+
+.droplet-1 {
+  top: -50px;
+  left: 30%;
+  animation: drop 15s infinite linear;
+}
+
+.droplet-2 {
+  top: -30px;
+  right: 40%;
+  animation: drop 12s infinite linear;
+  animation-delay: -7s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-1%) translateY(0.5%);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.hero-content {
+  max-width: min(1200px, 90%);
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 4rem);
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  max-width: 600px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  background: white;
+  color: var(--primary-blue);
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Subtle water ripple effect */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 60vh;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding: 2rem 1rem;
+  }
+
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Hide background molecules on mobile */
+  .background-elements {
+    display: none;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .molecule {
+    opacity: 0.15;
+  }
+  
+  .molecule-1 {
+    width: 250px;
+    top: 15%;
+    right: 5%;
+  }
+  
+  .molecule-2 {
+    width: 200px;
+    bottom: 10%;
+    left: 5%;
+  }
+}
+
+/* Landscape mode */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    padding-top: 6rem;
+  }
+}
+
+.molecule:nth-child(odd) {
+  animation: float 15s infinite ease-in-out;
+}
+
+.molecule:nth-child(even) {
+  animation: float 20s infinite ease-in-out reverse;
+} 

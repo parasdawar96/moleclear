@@ -1,0 +1,150 @@
+.solutions-section {
+  padding: 6rem 2rem;
+  background: var(--background-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-content h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.section-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #3498db;
+  border-radius: 2px;
+}
+
+.section-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #34495e;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.solution-card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 2.5rem;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.solution-card:hover {
+  transform: translateY(-5px);
+}
+
+.solution-card h3 {
+  background: -webkit-linear-gradient(45deg, #3498db, #2ecc71);
+  background: -moz-linear-gradient(45deg, #3498db, #2ecc71);
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: #3498db; /* Fallback */
+}
+
+.solution-card h4 {
+  color: var(--secondary-blue);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.solution-description {
+  color: #34495e;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.features-list {
+  margin: 2rem 0;
+  padding-left: 1.5rem;
+}
+
+.features-list li {
+  color: var(--text-light);
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.products-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.products-list li {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.products-list strong {
+  color: var(--text-dark);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.products-section h5 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin: 1.5rem 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .solutions-section {
+    padding: 4rem 1rem;
+  }
+
+  .solutions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-card {
+    padding: 1.5rem;
+  }
+
+  .solution-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .section-content h2 {
+    font-size: 2rem;
+  }
+
+  .section-intro {
+    font-size: 1.1rem;
+  }
+}
+
+.solutions-bg {
+  opacity: 0.7;
+} 
